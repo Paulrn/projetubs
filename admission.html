@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="shortcut icon" href="icone.png">
+    <!-- lien entre page CSS et html-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="TP1.html"><img src="LogoGI.jpg" width="250" height="180" alt="Logo"></a>
+    <div class="container_informations">
+        <h2>Plus d'informations</h2>
+        <iframe src="https://www-ensibs.univ-ubs.fr/fr/formations/rechercher-une-formation.html" width="100%"
+            height="300px" id="Iframe_ENSIBS"></iframe>
+        <h3>Découvrir plus d'informations sur notre site :
+            <a href="https://www-ensibs.univ-ubs.fr/fr/formations/rechercher-une-formation.html">ENSIBS.fr</a>
+        </h3>
+
+        <h2>Nous contacter</h2>
+        <h3 id="myfooterJS2">Retrouver nous sur notre site de Lorient</h3>
+            <script>
+                function myFunction(){
+                    document.getElementById("myfooterJS2").style.fontSize = "35px";
+                    document.getElementById("myfooterJS2").style.color = "black";
+                    document.getElementById("myfooterJS2").style.backgroundColor = "298Ob9";
+                    document.getElementById("myfooterJS2").innerHTML = 
+                    "Adresse : 17 Bd Flandres Dunkerque 1940, 56100 Lorient";
+                }
+            </script>
+            <button type="button" onclick="myFunction()" id="button-myfooter">Retrouvez nous !</button>
+
+            <h2>Dernière consultation</h2>
+            <button type="button" id="button-myfooter-information"
+            onclick="document.getElementById('consultation').innerHTML=
+            new Date().toLocaleString('fr-FR',{weekday : 'long', year:'numeric', month:'long', day:'numeric',
+            hour:'2-digit', minute:'2-digit', second:'2-digit'})">
+            Cliquer ici    
+            </button>
+            <p id="consultation"></p>
+    </div>
+</body>
+</html>

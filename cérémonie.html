@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!-- lien entre page CSS et html-->
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+<body>
+    <div class="containerceremony">
+        <a href="TP1.html"><img src="LogoGI.jpg" width=250px height=180px alt=""></a>
+        <!-- lien vers une page avec une image-->
+
+
+        <h1 style="text-align: center;">L'ENSIBS célèbre ses diplômés</h1>
+        <p>
+            La cérémonie de remise des diplômes est un événement majeur dans la vie de l’école d’ingénieur,
+            cette cérémonie est l’occasion de célébrer à la fois la réussite des élèves ingénieurs et la fin de leurs
+            études.
+            Organisée depuis de nombreuses années, cette cérémonie est devenue un incontournable
+        </p>
+
+        <script>
+            function promotion(année) {
+                var image;
+                if (année == 2024) {
+                    image = "promotion 2024.jpg"
+                } else if (année == 2023) {
+                    image = "promotion 2023.jpg"
+                } else if (année == 2022) {
+                    image = "promotion 2022.jpg"
+                } else {
+                    image = "promotion 2021.jpg"
+                }
+                document.getElementById("monImage").src = image;
+            }
+        </script>
+
+        <img id="monImage" src="cérémonie.jpg" width="1000" height="600">
+
+        <p>
+            <button class="button-ceremony" type="button" onclick="promotion(2024)">Promotion 2024</button>
+            <button class="button-ceremony" type="button" onclick="promotion(2023)">Promotion 2023</button>
+            <button class="button-ceremony" type="button" onclick="promotion(2022)">Promotion 2022</button>
+            <button class="button-ceremony" type="button" onclick="promotion(2021)">Promotion 2021</button>
+        </p>
+    </div>
+</body>
+
+</html>
